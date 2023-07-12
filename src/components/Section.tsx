@@ -18,7 +18,7 @@ const Section = ({ id, children }: { id: string; children: ReactNode }) => {
 	});
 	return (
 		<section
-			className="w-full h-[100dvh] flex items-center justify-center"
+			className="w-full h-[100dvh] flex items-center justify-center snap-center snap-always"
 			id={id}
 			ref={ref}>
 			{children}

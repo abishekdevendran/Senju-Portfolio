@@ -70,6 +70,6 @@
 
 @layer base {
 	* {
-		@apply border-border scroll-smooth;
+		@apply border-border scroll-smooth snap-mandatory snap-y;
 	}
 }
