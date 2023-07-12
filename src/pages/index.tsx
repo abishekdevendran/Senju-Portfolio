@@ -3,11 +3,13 @@ import { NextSeo } from 'next-seo';
 import { atom } from 'jotai';
 import Section from '@/components/Section';
 import Home from '@/components/index/sections/Home';
-import Academics from '@/components/index/sections/Academics';
-import Experience from '@/components/index/sections/Experience';
-import Extracurricular from '@/components/index/sections/Extracurricular';
-import Responsibility from '@/components/index/sections/Responsibility';
-import Contact from '@/components/index/sections/Contact';
+import dynamic from 'next/dynamic';
+
+const Academics = dynamic(() => import('@/components/index/sections/Academics'));
+const Experience = dynamic(() => import('@/components/index/sections/Experience'));
+const Extracurricular = dynamic(() => import('@/components/index/sections/Extracurricular'));
+const Responsibility = dynamic(() => import('@/components/index/sections/Responsibility'));
+const Contact = dynamic(() => import('@/components/index/sections/Contact'));
 
 export const navHrefAtom = atom<string>('Home');
 export default function Index() {

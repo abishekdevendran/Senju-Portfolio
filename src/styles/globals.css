@@ -72,4 +72,7 @@
 	* {
 		@apply border-border scroll-smooth snap-mandatory snap-y;
 	}
+	body, #__next {
+		@apply w-full
+	} 
 }
