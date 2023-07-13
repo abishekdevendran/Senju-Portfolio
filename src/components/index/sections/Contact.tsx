@@ -89,13 +89,13 @@ const Contact = () => {
 							</div>
 						</form>
 					</Form> */}
-					<div className="flex flex-col lg:flex-row gap-2">
-						<p className="font-openSans text-lg">{`You can reach me at `}</p>
+					<p className="font-openSans text-lg">
+						{`You can reach me at `}
 						<Link
 							className="font-openSans text-lg underline"
 							href="mailto:sanjaynatarajan02@gmail.com"
 							rel="noopener noreferrer">{`sanjaynatarajan02@gmail.com`}</Link>
-					</div>
+					</p>
 				</CardContent>
 				<CardFooter className="flex gap-8">
 					<Link href="https://www.instagram.com/raaman.sanjay/">

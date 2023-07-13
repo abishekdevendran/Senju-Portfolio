@@ -9,8 +9,8 @@ const Home = () => {
 				<div className="font-poppins font-extrabold text-7xl leading-tight mb-4">
 					Sanjay Raaman
 				</div>
-				<div className="flex gap-2">
-					<div className="font-openSans text-2xl">{`An engineer from `}</div>
+				<div className="font-openSans text-2xl">
+					{`An engineer from `}
 					<Link
 						className="font-openSans text-2xl underline"
 						href="https://www.google.com/maps/place/Chennai,+Tamil+Nadu"
