@@ -6,6 +6,7 @@ import defaultSeo from '@/config/defaultSeo';
 import { Provider } from 'jotai';
 import { Poppins, Roboto, Open_Sans } from 'next/font/google';
 import { Toaster } from '@/components/ui/toaster';
+import { appWithTranslation } from 'next-i18next';
 
 const poppins = Poppins({
 	subsets: ['latin'],
@@ -25,7 +26,7 @@ const openSans = Open_Sans({
 	variable: '--font-open-sans'
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<DefaultSeo {...defaultSeo} />
@@ -41,3 +42,5 @@ export default function App({ Component, pageProps }: AppProps) {
 		</>
 	);
 }
+
+export default appWithTranslation(App);

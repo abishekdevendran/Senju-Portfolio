@@ -19,6 +19,7 @@ const Section = ({ id, children }: { id: string; children: ReactNode }) => {
 		onChange: (inView) => {
 			if (inView) {
 				setNavHref(id);
+				router.replace(`/#${id}`, undefined, { scroll: false });
 			}
 		}
 	});

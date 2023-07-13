@@ -16,6 +16,7 @@ import {
 } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { Instagram, Linkedin, Menu, Scale } from 'lucide-react';
+import { LanguageToggle } from '@/components/LanguageToggle';
 
 export const values = [
 	{ value: 'Home', label: 'Home' },
@@ -88,7 +89,7 @@ const Navbar = () => {
 						Sanjay Raaman
 					</span>
 				</div>
-				<div className="flex items-center justify-end gap-4">
+				<div className="flex items-center justify-end gap-2">
 					<Tabs
 						defaultValue="Home"
 						value={hrefValue}
@@ -106,6 +107,7 @@ const Navbar = () => {
 						</TabsList>
 					</Tabs>
 					<DarkModeToggle />
+					<LanguageToggle />
 				</div>
 			</div>
 		</nav>
