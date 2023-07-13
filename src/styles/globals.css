@@ -72,8 +72,4 @@
 	* {
 		@apply border-border scroll-smooth snap-proximity snap-both;
 	}
-	body,
-	#__next {
-		@apply w-full;
-	}
 }
