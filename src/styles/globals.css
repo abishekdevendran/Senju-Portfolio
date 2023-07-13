@@ -70,9 +70,10 @@
 
 @layer base {
 	* {
-		@apply border-border scroll-smooth snap-mandatory snap-y;
+		@apply border-border scroll-smooth snap-proximity snap-both;
 	}
-	body, #__next {
-		@apply w-full
-	} 
+	body,
+	#__next {
+		@apply w-full;
+	}
 }

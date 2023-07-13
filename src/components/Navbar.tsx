@@ -17,7 +17,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Instagram, Linkedin, Menu, Scale } from 'lucide-react';
 
-const values = [
+export const values = [
 	{ value: 'Home', label: 'Home' },
 	{ value: 'Academics', label: 'Academics' },
 	{ value: 'Experience', label: 'Experience' },
@@ -41,7 +41,7 @@ const Navbar = () => {
 		}
 	};
 	return (
-		<nav className="bg-white border-gray-200 dark:bg-gray-900 w-full fixed top-0 backdrop-filter backdrop-blur-lg bg-opacity-30">
+		<nav className="bg-white border-gray-200 dark:bg-gray-900 w-full fixed top-0 backdrop-filter backdrop-blur-lg bg-opacity-30 z-50">
 			<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 				<div className="flex items-center justify-start gap-8">
 					<Sheet onOpenChange={setIsSheetOpen} open={isSheetOpen}>
