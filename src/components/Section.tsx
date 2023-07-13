@@ -19,7 +19,6 @@ const Section = ({ id, children }: { id: string; children: ReactNode }) => {
 		onChange: (inView) => {
 			if (inView) {
 				setNavHref(id);
-				router.replace(`/#${id}`, undefined, { scroll: false });
 			}
 		}
 	});
@@ -32,10 +31,15 @@ const Section = ({ id, children }: { id: string; children: ReactNode }) => {
 			{children}
 			<Button
 				className={`absolute z-0 bottom-4 animate-bounce transition-all duration-500 ${
-					debouncedInView ? 'opacity-70' : 'opacity-0'
+					debouncedInView
+						? 'opacity-70 cursor-pointer'
+						: 'opacity-0 cursor-default'
 				}`}
 				variant={'ghost'}
-				onClick={() =>
+				onClick={() => {
+					if (!debouncedInView) {
+						return;
+					}
 					router.push(
 						`/#${
 							isReversed
@@ -45,8 +49,8 @@ const Section = ({ id, children }: { id: string; children: ReactNode }) => {
 						}`,
 						undefined,
 						{ scroll: false }
-					)
-				}>
+					);
+				}}>
 				{isReversed ? <ArrowUpIcon size={32} /> : <ArrowDownIcon size={32} />}
 			</Button>
 		</section>
