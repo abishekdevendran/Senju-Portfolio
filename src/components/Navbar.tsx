@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useAtom } from 'jotai';
 import { navHrefAtom } from '@/pages';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
 import {
 	Sheet,
@@ -15,7 +16,7 @@ import {
 	SheetTrigger
 } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
-import { Instagram, Linkedin, Menu, Scale } from 'lucide-react';
+import { Instagram, Linkedin, Menu } from 'lucide-react';
 import { LanguageToggle } from '@/components/LanguageToggle';
 
 export const values = [
@@ -31,6 +32,7 @@ const Navbar = () => {
 	const [hrefValue, setHrefValue] = useAtom(navHrefAtom);
 	const [isSheetOpen, setIsSheetOpen] = useState(false);
 	const router = useRouter();
+	const { t } = useTranslation('common');
 	const handleChange = (value: string) => {
 		setHrefValue(value);
 		router.push(`/#${value}`, undefined, { scroll: false });
@@ -55,7 +57,7 @@ const Navbar = () => {
 							<SheetHeader>
 								<SheetTitle>Navigation</SheetTitle>
 								<SheetDescription className="flex flex-col gap-2">
-									{values.map(({ value, label }) => (
+									{values.map(({ value }) => (
 										<Link href={`/#${value}`} key={value} scroll={false}>
 											<Button
 												variant={hrefValue === value ? 'default' : 'outline'}
@@ -67,7 +69,7 @@ const Navbar = () => {
 													e.preventDefault();
 													handleChange(value);
 												}}>
-												{label}
+												{t(`navbar.${value}`)}
 											</Button>
 										</Link>
 									))}
@@ -86,7 +88,7 @@ const Navbar = () => {
 					</Sheet>
 
 					<span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-						Sanjay Raaman
+						{t('home.name')}
 					</span>
 				</div>
 				<div className="flex items-center justify-end gap-2">
@@ -96,14 +98,20 @@ const Navbar = () => {
 						onValueChange={handleChange}
 						className="hidden lg:block">
 						<TabsList>
-							<TabsTrigger value="Home">Home</TabsTrigger>
-							<TabsTrigger value="Academics">Academics</TabsTrigger>
-							<TabsTrigger value="Experience">Experience</TabsTrigger>
-							<TabsTrigger value="Extracurricular">Extracurricular</TabsTrigger>
-							<TabsTrigger value="Responsibility">
-								Social Responsibility
+							<TabsTrigger value="Home">{t('navbar.Home')}</TabsTrigger>
+							<TabsTrigger value="Academics">
+								{t('navbar.Academics')}
 							</TabsTrigger>
-							<TabsTrigger value="Contact">Contact Me</TabsTrigger>
+							<TabsTrigger value="Experience">
+								{t('navbar.Experience')}
+							</TabsTrigger>
+							<TabsTrigger value="Extracurricular">
+								{t('navbar.Extracurricular')}
+							</TabsTrigger>
+							<TabsTrigger value="Responsibility">
+								{t('navbar.Responsibility')}
+							</TabsTrigger>
+							<TabsTrigger value="Contact">{t('navbar.Contact')}</TabsTrigger>
 						</TabsList>
 					</Tabs>
 					<DarkModeToggle />

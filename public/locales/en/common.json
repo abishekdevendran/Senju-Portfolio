@@ -1,11 +1,27 @@
 {
+	"navbar": {
+		"Home": "Home",
+		"Academics": "Academics",
+		"Experience": "Experience",
+		"Extracurricular": "Extracurricular",
+		"Responsibility": "Social Responsibility",
+		"Contact": "Contact Me"
+	},
 	"home": {
 		"h1": "Hi, I'm",
-		"name": "Sanjay Raaman.",
+		"name": "Sanjay Raaman",
 		"extra": "",
 		"h2": {
 			"p1": "An aspiring engineer from ",
 			"p2": "Chennai, Tamil Nadu.",
+			"extra": ""
+		}
+	},
+	"contact": {
+		"title": "Contact Me!",
+		"description": "I'm always open to new opportunities and experiences. Feel free to contact me through any of the following platforms.",
+		"p": {
+			"p1": "You can reach me at ",
 			"extra": ""
 		}
 	}

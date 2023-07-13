@@ -25,12 +25,14 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { toast } from '@/components/ui/use-toast';
+import { useTranslation } from 'next-i18next';
 
 const FormSchema = z.object({
 	username: z.string().email('Please enter a valid email address')
 });
 
 const Contact = () => {
+	const { t } = useTranslation('common');
 	// const form = useForm<z.infer<typeof FormSchema>>({
 	// 	resolver: zodResolver(FormSchema)
 	// });
@@ -50,11 +52,10 @@ const Contact = () => {
 			<Card className="w-full mx-16 md:mx-32 lg:w-1/2 p-8 lg:p-16">
 				<CardHeader>
 					<CardTitle className="font-poppins text-5xl lg:text-7xl leading-snug mb-8">
-						Contact Me!
+						{t('contact.title')}
 					</CardTitle>
 					<CardDescription className="font-openSans text-xl">
-						If my skillset seems like a good fit, or if you simply want to
-						connect, email me or reach out to me on social media!
+						{t('contact.description')}
 					</CardDescription>
 				</CardHeader>
 				<CardContent>
@@ -90,11 +91,12 @@ const Contact = () => {
 						</form>
 					</Form> */}
 					<p className="font-openSans text-lg">
-						{`You can reach me at `}
+						{t('contact.p.p1')}
 						<Link
 							className="font-openSans text-lg underline"
 							href="mailto:sanjaynatarajan02@gmail.com"
 							rel="noopener noreferrer">{`sanjaynatarajan02@gmail.com`}</Link>
+						{t('contact.p.extra')}
 					</p>
 				</CardContent>
 				<CardFooter className="flex gap-8">

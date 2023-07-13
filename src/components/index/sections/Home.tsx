@@ -8,7 +8,7 @@ const Home = () => {
 		<div className="w-full h-full flex items-center justify-center bg-background">
 			<div className="flex flex-col gap-4 p-8">
 				<div>{t('home.h1')}</div>
-				<div className="flex items-end justify-start">
+				<div className="flex items-end justify-center">
 					<div className="font-poppins font-extrabold text-6xl leading-tight mb-4 text-center">
 						{t('home.name')}
 					</div>
