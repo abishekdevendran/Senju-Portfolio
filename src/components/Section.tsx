@@ -25,7 +25,7 @@ const Section = ({ id, children }: { id: string; children: ReactNode }) => {
 	const debouncedInView = useDebounce(inView, 1000);
 	return (
 		<section
-			className="w-full h-[100dvh] flex items-center justify-center snap-center relative"
+			className="w-full h-[100dvh] flex items-center justify-center snap-center relative z-0"
 			id={id}
 			ref={ref}>
 			{children}

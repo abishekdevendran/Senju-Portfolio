@@ -44,7 +44,7 @@ const Navbar = () => {
 		}
 	};
 	return (
-		<nav className="bg-white border-gray-200 dark:bg-gray-900 w-full fixed top-0 backdrop-filter backdrop-blur-lg bg-opacity-30 z-50">
+		<nav className="border-gray-200 bg-white/60 dark:bg-gray-900/60 w-full fixed top-0 backdrop-filter backdrop-blur-md bg-opacity-30 z-50">
 			<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 				<div className="flex items-center justify-start gap-8">
 					<Sheet onOpenChange={setIsSheetOpen} open={isSheetOpen}>
