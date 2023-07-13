@@ -76,10 +76,14 @@ const Navbar = () => {
 								</SheetDescription>
 								<SheetTitle>Socials</SheetTitle>
 								<SheetDescription className="flex gap-4">
-									<Link href="https://www.instagram.com/raaman.sanjay/">
+									<Link
+										href="https://www.instagram.com/raaman.sanjay/"
+										aria-label={`Sanjay's Instagram`}>
 										<Instagram size={32} />
 									</Link>
-									<Link href="https://www.linkedin.com/in/sanjay-raaman/	">
+									<Link
+										href="https://www.linkedin.com/in/sanjay-raaman/"
+										aria-label={`Sanjay's LinkedIn`}>
 										<Linkedin size={32} />
 									</Link>
 								</SheetDescription>

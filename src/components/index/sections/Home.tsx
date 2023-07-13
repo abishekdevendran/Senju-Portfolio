@@ -9,7 +9,7 @@ const Home = () => {
 			<div className="flex flex-col gap-4 p-8">
 				<div>{t('home.h1')}</div>
 				<div className="flex items-end justify-center">
-					<div className="font-poppins font-extrabold text-6xl leading-tight mb-4 text-center">
+					<div className="font-poppins font-extrabold text-6xl md:text-8xl leading-tight mb-4 text-center">
 						{t('home.name')}
 					</div>
 					<div>{t('home.extra')}</div>

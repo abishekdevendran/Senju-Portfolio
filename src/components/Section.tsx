@@ -30,6 +30,7 @@ const Section = ({ id, children }: { id: string; children: ReactNode }) => {
 			ref={ref}>
 			{children}
 			<Button
+				aria-label={isReversed ? 'Previous Section' : 'Next Section'}
 				className={`absolute z-0 bottom-4 animate-bounce transition-all duration-500 ${
 					debouncedInView
 						? 'opacity-70 cursor-pointer'
