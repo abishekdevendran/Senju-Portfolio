@@ -14,7 +14,7 @@ const Section = ({ id, children }: { id: string; children: ReactNode }) => {
 	const router = useRouter();
 	const { ref, inView } = useInView({
 		threshold: 0.5,
-		delay: 800,
+		delay: 100,
 		initialInView: false,
 		onChange: (inView) => {
 			if (inView) {
